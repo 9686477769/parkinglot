@@ -1,0 +1,27 @@
+body{
+    text-align: center;
+    margin: 50px;
+    height: auto;
+    /* width: 100%; */
+    background-image: url(parkingimg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: mediumvioletred;
+}
+.container{
+    background-image: linear-gradient(to right, white, lightskyblue);
+    width: 350px;
+    height: 200px;
+    margin-left: 350px;
+    box-shadow: 2px 2px 4px 4px lightcyan;
+    border-radius: 10px;
+    /* margin-top: 100px; */
+
+}
+.container:hover{
+    background-image: linear-gradient(to left, white, lightskyblue);
+}
+
+#label1{
+    padding-top: 10px;
+}

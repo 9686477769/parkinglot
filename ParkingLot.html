@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ParkingLot.css">
+</head>
+<body>
+    <h1>Parking Lot</h1>
+    <div class="container"><br><br>
+        <label for="input" id="label1">Type Of Vehicle:</label>
+        <select id="input1">
+            <option value="Two Wheeler">Two Wheeler</option>
+            <option value="Four Wheeler">Four Wheeler</option>
+        </select>
+        <br><br><br>
+        <label >Parking Time:</label>
+        <select  id="input2">
+            <option value="1-2hrs">1-2hrs</option>
+            <option value="2-4hrs">2-4hrs</option>
+            <option value="4-6hrs">4-6hrs</option>
+            <option value="More Than 6hrs">More Than 6hrs</option>
+        </select>
+        <button type="submit" id="btn">Submit</button>
+        <h3 id="output"></h3>
+        
+         <script>
+            let button= document.querySelector("button")
+            button.addEventListener('click',display)
+            function display(){
+                let input1= document.querySelector("#input1")
+                let input2= document.querySelector("#input2")
+                let output1= input1.options[input1.selectedIndex].value
+                let output2= input2.options[input2.selectedIndex].value
+
+             if(output1=="Two Wheeler")
+                  if(output2=="1-2hrs")
+                      output.innerHTML= output2 + " The Parking Charge is 20Rs"
+                 else if(output2=="2-4hrs")
+                      output.innerHTML= output2 + " The Parking Charge is 40Rs"
+                 else if(output2=="4-6hrs")
+                       output.innerHTML= output2 + " The Parking Charge is 80Rs"
+                 else if(output2=="More Than 6hrs")
+                         output.innerHTML =output2 + " The Parking Charge is 100Rs"
+                 else
+                     output.innerHTML="No Data Found" 
+
+             else if (output1=="Four Wheeler") 
+                   if(output2=="1-2hrs")
+                      output.innerHTML= output2 + " The Parking Charge is 30Rs"
+                 else if(output2=="2-4hrs")
+                      output.innerHTML = output2 + " The Parking Charge is 60Rs"
+                 else if(output2=="4-6hrs")
+                       output.innerHTML= output2 + " The Parking Charge is 90Rs"
+                 else if(output2=="More Than 6hrs")
+                         output.innerHTML = output2 + " The Parking Charge is 120Rs"
+                 else
+                     output.innerHTML="No Data Found" 
+                  
+            }
+        </script>
+    </div>
+</body>
+</html>
